@@ -17,6 +17,10 @@ rootProject.allprojects {
         google()
         mavenCentral()
     }
+
+    tasks.withType(JavaCompile) {
+        options.compilerArgs << '-Xlint:-options'
+    }
 }
 
 apply plugin: 'com.android.library'
